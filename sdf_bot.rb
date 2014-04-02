@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 require 'cinch'
 
@@ -14,7 +14,6 @@ bot = Cinch::Bot.new do
 
   on :message, "!help" do |m|
     m.reply "Available options:\n !players - Current players on the server\n"
-    #//m.reply "llo, #{m.user.nick}"
   end
   on :message, "!players" do |m|
     doc = Nokogiri::HTML(open('http://dpmaster.deathmask.net/?game=openarena&server=195.154.82.77:27960'))
