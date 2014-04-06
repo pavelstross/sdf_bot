@@ -68,7 +68,6 @@ end
 
 def fetch_and_parse_data
   doc = Nokogiri::HTML(open('http://dpmaster.deathmask.net/?game=openarena'))
-  "\n\n\nFETCHED"
   indexes = []
   doc.xpath("//div[@id='gametype']").drop(1).each_with_index do |gametype, index|
     if gametype.text == "defrag" then
